@@ -13,7 +13,7 @@ public class UserController {
         users.add(user);
     }
 
-    //todo return proper status codes
+    //todo return proper status code
     //todo return id after post
 
     @DeleteMapping("/users/{id}")
