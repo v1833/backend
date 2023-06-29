@@ -11,7 +11,9 @@ public class UserController {
 
     @PostMapping("/users")
     public void addUser(@RequestBody User user) {
-        users.add(user);
+        if(user != null) {
+            users.add(user);
+        }
     }
 
     //todo 1) return proper status code 2) return id after post
