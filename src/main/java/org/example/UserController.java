@@ -3,6 +3,7 @@ package org.example;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class UserController {
@@ -13,9 +14,7 @@ public class UserController {
         users.add(user);
     }
 
-    //todo return proper status code
-    //todo return id after post
-
+    //todo 1) return proper status code 2) return id after post
     @DeleteMapping("/users/{id}")
     public void removeUser(@PathVariable long id) {
         for (User user : users) {
@@ -27,7 +26,7 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public ArrayList<User> getAll(){
+    public List<User> getAll(){
         return users;
     }
 }
