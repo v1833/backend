@@ -16,7 +16,6 @@ public class UserController {
         }
     }
 
-    //todo 1) return proper status code 2) return id after post
     @DeleteMapping("/users/{id}")
     public void removeUser(@PathVariable long id) {
         for (User user : users) {
