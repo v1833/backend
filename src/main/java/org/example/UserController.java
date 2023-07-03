@@ -7,7 +7,7 @@ import java.util.List;
 
 @RestController
 public class UserController {
-    private final ArrayList<User> users = new ArrayList<>();
+    private final List<User> users = new ArrayList<>();
 
     @PostMapping("/users")
     public void addUser(@RequestBody User user) {
